@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <meta charset="UTF-8">
+        <title>Calculator</title>
+    </head>
+    <body>
+        <h1>Calulator</h1>
+        <input type="text" id="x" placeholder="X">
+        <p> + </p>
+        <input type="text" id="y" placeholder="Y">
+        <br>
+        <h3>The answer </h3>
+        <div id="output">
+            0
+        </div>
+        <script>
+            let x = document.getElementById("x");
+            let y = document.getElementById("y");
+            let output = document.getElementById("output");
+            x.oninput = function() {
+                let answer = parseFloat(x.value) + parseFloat(y.value);
+                output.innerText = answer;   
+            };
+            y.oninput = function () {
+                let answer = parseFloat(x.value) + parseFloat(y.value);
+                output.innerText = answer;
+            }
+        </script>
+    </body>
+</html>
